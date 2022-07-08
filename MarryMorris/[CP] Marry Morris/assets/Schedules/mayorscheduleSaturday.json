@@ -1,0 +1,11 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Characters/schedules/MorrisTod",
+            "Entries": {
+                "MarriageJob": "610 Town 99 52 2 \"Strings\\schedules\\Morris:Mayor\"/800 Mountain 30 29 2 \"Strings\\schedules\\Morris:Mayor\"/1200 Town 94 12 0 \"Strings\\schedules\\Morris:Mayor\"/1400 Town 53 25 0 \"Strings\\schedules\\Morris:Mayor\"/1600 JojaMart 24 26 3 \"Strings\\schedules\\Morris:Joja\"/1930 BusStop -1 23 3"
+            }
+        }
+    ]
+}

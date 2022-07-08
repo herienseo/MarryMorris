@@ -1,0 +1,17 @@
+﻿{
+	"Name": "[CKM] Marry Morris",
+	"Author": "Yoshimax",
+	"Version": "1.0.0",
+	"Description": "Adds custom kissing configuration for Morris.",
+	"UniqueID": "Yoshimax.MarryMorrisCKM",
+	"MinimumApiVersion": "3.0.0",
+	"UpdateKeys": [],
+	"Dependencies": [
+		{
+			"UniqueID": "Yoshimax.MarryMorris"
+		}
+	],
+	"ContentPackFor": {
+		"UniqueID": "Digus.CustomKissingMod"
+	}
+}
