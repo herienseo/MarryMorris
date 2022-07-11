@@ -590,14 +590,14 @@
         //Randomly loads Morris's schedule dialogue
         {
             "Action": "Load",
-            "Target": "Strings/schedules/MorrisTod",
+            "Target": "Strings/schedules/Morris",
             "FromFile": "assets/Dialogue/workdialogue{{Random:1, 2, 3, 4, 5}}.json"
         },
 
         //Changes work Morris dialogue when he's married and has low hearts
         {
             "Action": "EditData",
-            "Target": "Strings/schedules/MorrisTod",
+            "Target": "Strings/schedules/Morris",
             "When": {"Spouse |contains=MorrisTod": "true", "Hearts:MorrisTod": "{{Range: 0, 8}}"},
             "Entries": {
                 "Joja": "I have far too much to do today and don't have time to deal with you.$3#$e#Why don't you buy something and go?$3",
@@ -1641,7 +1641,34 @@
             "FromFile": "assets/Schedules/marriageschedulejojanosve.json"
         },
 
+        //Morris's hospital checkup
+        {
+            "Action": "EditData",
+            "Target": "Characters/schedules/MorrisTod",
+            "Entries": {
+                "spring_19": "630 Town 18 59 2/1000 Hospital 13 14 0/1330 Hospital 4 6 1 \"Strings\\schedules\\Morris:Hospital\"/1530 Beach 45 24 2/1900 Saloon 20 17 3/2200 Custom_Yoshimax_MorrisHome 15 5 1",
+                "marriage_spring_19": "630 Town 18 59 2/1000 Hospital 13 14 0/1330 Hospital 4 6 1 \"Strings\\schedules\\Morris:HospitalMarriage\"/1530 Beach 45 24 2/1900 BusStop -1 23 3"
+            }
+        },
 
+        {
+            "Action": "EditData",
+            "Target": "Characters/schedules/MorrisTod",
+            "When": {"HasSeenEvent |contains=6663408": "true"},
+            "Entries": {
+                "spring_19": "0 Custom_MorrisHouse 16 6 2/630 Town 18 59 2/1000 Hospital 13 14 0/1330 Hospital 4 6 1 \"Strings\\schedules\\Morris:Hospital\"/1530 Beach 45 24 2/1900 Saloon 20 17 3/2200 Custom_MorrisHouse 16 6 2",
+                "marriage_spring_19": "630 Town 18 59 2/1000 Hospital 13 14 0/1330 Hospital 4 6 1 \"Strings\\schedules\\Morris:HospitalMarriage\"/1530 Beach 45 24 2/1900 BusStop -1 23 3"
+            }
+        },
+
+        {
+            "Action": "EditData",
+            "Target": "Characters/schedules/Harvey",
+            "Entries": {
+                "spring_19": "GOTO Tue",
+                "marriage_spring_19": "GOTO Tue"
+            }
+        },
 
 
 

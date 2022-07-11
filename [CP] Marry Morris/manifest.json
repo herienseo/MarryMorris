@@ -1,7 +1,7 @@
 {
     "Name": "Marry Morris (Content Patcher)",
     "Author": "Yoshimax",
-    "Version": "1.0.1",
+    "Version": "1.1.0",
     "Description": "This mod allows you to marry Morris.",
     "UniqueID": "Yoshimax.MarryMorris",
     "UpdateKeys": ["Nexus:12824"],
