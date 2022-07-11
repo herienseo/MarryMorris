@@ -1,0 +1,41 @@
+{
+    "Name": "Marry Morris (Content Patcher)",
+    "Author": "Yoshimax",
+    "Version": "1.0.1",
+    "Description": "This mod allows you to marry Morris.",
+    "UniqueID": "Yoshimax.MarryMorris",
+    "UpdateKeys": ["Nexus:12824"],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+        "UniqueID": "FlashShifter.StardewValleyExpandedCP",
+        "IsRequired": false
+        },
+        {
+            "UniqueID": "Digus.CustomKissingMod",
+            "IsRequired": true
+        },
+        {
+			"UniqueID": "MabelSyrup.ResetTerrainFeatures",
+			"IsRequired": false
+		},
+        {
+            "UniqueID": "aedenthorn.ExtraMapLayers",
+            "IsRequired": true
+        },
+        {
+            "UniqueID": "Cherry.ShopTileFramework",
+            "IsRequired": true
+        },
+        {
+            "UniqueID": "Bouhm.NPCMapLocations",
+            "IsRequired": false
+        },
+        {
+            "UniqueID": "Esca.CustomNPCExclusions",
+            "IsRequired": true
+        }
+    ]
+}
