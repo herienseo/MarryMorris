@@ -1,7 +1,7 @@
 {
     "Name": "Marry Morris (Content Patcher)",
     "Author": "Yoshimax",
-    "Version": "1.1.1",
+    "Version": "1.2.1",
     "Description": "This mod allows you to marry Morris.",
     "UniqueID": "Yoshimax.MarryMorris",
     "UpdateKeys": ["Nexus:12824"],
@@ -36,6 +36,10 @@
         {
             "UniqueID": "Esca.CustomNPCExclusions",
             "IsRequired": true
+        },
+        {
+            "UniqueID": "Poltergeister.SeasonalCuteSpritesSVE",
+            "IsRequired": false
         }
     ]
 }

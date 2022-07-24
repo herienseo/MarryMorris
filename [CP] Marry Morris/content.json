@@ -220,7 +220,7 @@
             "Action": "Load",
             "Target": "Characters/Dialogue/MorrisTod",
             "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false", "HasSeenEvent |contains=191393": "false"},
-            "FromFile": "assets/Dialogue/nosvedialogue.json"
+            "FromFile": "{{FirstValidFile: assets/Dialogue/nosvedialogue{{language}}.json, assets/Dialogue/nosvedialogue.json }}"
         },
 
         //Loads festival/other dialogue for Morris -- overwrites SVE dialogue because Morris will appear at festivals without becoming mayor
@@ -380,7 +380,7 @@
             "Action": "Load",
             "Target": "Characters/Dialogue/MorrisTod",
             "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false", "HasSeenEvent |contains=191393": "true"},
-            "FromFile": "assets/Dialogue/ccdialogue.json"
+            "FromFile": "{{FirstValidFile: assets/Dialogue/ccdialogue{{language}}.json, assets/Dialogue/ccdialogue.json }}"
         },
 
         //Edits regular dialogue for Morris when CC completed and SVE installed (to overwrite all Joja lines)
@@ -570,28 +570,28 @@
         {
             "Action": "Load",
             "Target": "Characters/Dialogue/MarriageDialogueMorrisTod",
-            "FromFile": "assets/Dialogue/marriagedialogue.json"
+            "FromFile": "{{FirstValidFile: assets/Dialogue/marriagedialogue{{language}}.json, assets/Dialogue/marriagedialogue.json }}"
         },
 
         //Loads Morris's marriage dialogue when Joja route taken/CC route not taken
         {
             "Action": "Include",
             "When": {"HasSeenEvent |contains=191393": "false"},
-            "FromFile": "assets/Dialogue/marriagedialoguejoja.json"
+            "FromFile": "{{FirstValidFile: assets/Dialogue/marriagedialoguejoja{{language}}.json, assets/Dialogue/marriagedialoguejoja.json }}"
         },
 
         //Loads Morris's marriage dialogue when he's the mayor
         {
             "Action": "Include",
             "When": {"HasSeenEvent |contains=191393": "false", "HasSeenEvent |contains=6665293": "true"},
-            "FromFile": "assets/Dialogue/marriagedialoguemayor.json"
+            "FromFile": "{{FirstValidFile: assets/Dialogue/marriagedialoguemayor{{language}}.json, assets/Dialogue/marriagedialoguemayor.json }}"
         },
 
         //Randomly loads Morris's schedule dialogue
         {
             "Action": "Load",
             "Target": "Strings/schedules/Morris",
-            "FromFile": "assets/Dialogue/workdialogue{{Random:1, 2, 3, 4, 5}}.json"
+            "FromFile": "{{FirstValidFile: assets/Dialogue/workdialogue{{Random:1, 2, 3, 4, 5}}{{language}}.json, assets/Dialogue/workdialogue{{Random:1, 2, 3, 4, 5}}.json }}"
         },
 
         //Changes work Morris dialogue when he's married and has low hearts
@@ -1008,7 +1008,13 @@
                 }
             },
 
+        //Loads Chinese translation
 
+        {
+            "Action": "Include",
+            "FromFile": "assets/Translations/zh.json",
+            "When": {"Language": "zh"}
+        },
 
 
 
@@ -1505,7 +1511,7 @@
 
 
         //Schedules
-
+        
         //Loads Morris' schedule when SVE isn't installed and CC not completed
         {
             "Action": "Load",
@@ -1561,13 +1567,27 @@
                 "24": "GOTO Wed"
             }
         },
-
-        //Loads Morris' schedule when SVE isn't installed and CC is completed
+        
+        //Edits Morris' schedule when SVE isn't installed and CC is completed
         {
-            "Action": "Load",
+            "Action": "EditData",
             "Target": "Characters/schedules/MorrisTod",
             "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false", "HasSeenEvent |contains=191393": "true"},
-            "FromFile": "assets/Schedules/morrisschedulecc.json"
+            "Entries": {
+                "rain":  "GOTO spring",
+                "spring": "620 Custom_Yoshimax_MorrisLand 5 21 0/740 Town 9 58 2/1000 SeedShop 6 19 0/1800 Saloon 20 17 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Mon": "620 Custom_Yoshimax_MorrisLand 5 21 0/740 Town 9 58 2/1000 SeedShop 6 19 0/1800 Saloon 20 17 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Tue": "620 Custom_Yoshimax_MorrisLand 5 21 0/740 Town 18 59 2/1000 SeedShop 12 28 3/1800 Saloon 20 17 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Wed": "620 Custom_Yoshimax_MorrisLand 5 21 0/800 SeedShop 4 17 2/1700 Saloon 20 17 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Thu": "620 Custom_Yoshimax_MorrisLand 5 21 0/740 Town 47 57 2/1000 SeedShop 6 19 0/1800 Saloon 12 28 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Fri": "620 Custom_Yoshimax_MorrisLand 5 21 0/740 Town 25 36 0/1000 SeedShop 6 19 0/1800 Saloon 20 17 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Sat": "830 SeedShop 6 19 0/1330 Town 9 58 2/1730 Custom_Yoshimax_MorrisLand 17 20 1/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "Sun": "620 Custom_Yoshimax_MorrisLand 17 20 1/820 Mountain 28 35 2/1200 Beach 45 24 2/1800 Saloon 20 17 3/2300 Custom_Yoshimax_MorrisHome 15 5 1",
+                "marriageJob": "700 SeedShop 5 19 0 \"Strings\\schedules\\Morris:Pierre\"/1700 Saloon 20 18 3 \"Strings\\schedules\\Morris:Saloon\"/1930 BusStop -1 23 3",
+                "marriageJobWed": "700 SeedShop 4 17 2 \"Strings\\schedules\\Morris:Pierre\"/1700 Saloon 20 18 3 \"Strings\\schedules\\Morris:Saloon\"/1930 BusStop -1 23 3",
+                "marriage_Sun": "820 Mountain 28 35 2 \"Strings\\schedules\\Morris:Sunday\"/1200 Beach 45 24 2 \"Strings\\schedules\\Morris:Sunday\"/1700 BusStop -1 23 3"
+            },
+            "Update": "OnTimeChange"
         },
 
         //Edits Pierre's schedule to give him Wednesday off
@@ -1579,7 +1599,7 @@
                 "Wed": "610 SeedShop 20 19 3/1200 Mountain 28 35 2/1900 SeedShop 37 5 0/2100 SeedShop 20 5 0/2300 SeedShop 24 4 1 pierre_sleep"
             }
         },
-
+        
         //When raining on Wednesdays, edits Pierre's and Morris's schedules so Morris still works at the store
         {
             "Action": "EditData",
@@ -1589,6 +1609,7 @@
                 "rain": "GOTO Wed"
             }
         },
+        
         {
             "Action": "EditData",
             "Target": "Characters/schedules/MorrisTod",
@@ -1598,6 +1619,7 @@
 
             }
         },
+        
 
         //Edits Morris's schedule when he's the mayor
         {

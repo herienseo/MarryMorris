@@ -1,12 +1,12 @@
 ﻿{
   "Name": "Marry Morris",
   "Author": "Yoshimax",
-  "Version": "1.1.1",
+  "Version": "1.2.1",
   "Description": "This mod allows you to marry Morris.",
   "UniqueID": "Yoshimax.MarryMorrisCode",
   "EntryDll": "MarryMorris.dll",
   "MinimumApiVersion":  "3.0.0",
-  "UpdateKeys": [],
+  "UpdateKeys": ["Nexus:12824"],
   "Dependencies": [
     {
       "UniqueID": "FlashShifter.StardewValleyExpandedCP",
