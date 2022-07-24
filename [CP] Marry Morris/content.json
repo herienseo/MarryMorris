@@ -1512,11 +1512,11 @@
 
         //Schedules
         
-        //Loads Morris' schedule when SVE isn't installed and CC not completed
+        //Loads Morris' schedule when SVE isn't installed 
         {
             "Action": "Load",
             "Target": "Characters/schedules/MorrisTod",
-            "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false", "HasSeenEvent |contains=191393": "false"},
+            "When": {"HasMod |contains=FlashShifter.StardewValleyExpandedCP": "false"},
             "FromFile": "assets/Schedules/morrisschedule.json"
         },
 
